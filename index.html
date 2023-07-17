@@ -14,16 +14,26 @@
     <meta name="theme-color" content="#FF00FF" data-react-helmet="true" />
   </head>
   <body>
-    <h1>Pergunte ao Konqi!</h1>
-    <p tabindex="1"><a href="https://github.com/RedsonBr140/pergunteaokonqi">Source here</a></p>
-    <img src="https://community.kde.org/images.community/thumb/4/40/Mascot_konqi.png/400px-Mascot_konqi.png" id="konqi">
-    <div id="content">
-    <input tabindex="1" type="text" id="InputOne">
-    <span id="vs">vs</span>
-    <input tabindex="1" type="text" id="InputTwo">
-    <button tabindex="1" type="button" onclick="getInputValue()">Adivinhar</button>
-    </div>
-    <p id="konqidiz">
-    <p id="resultado"></p>
+    <header>
+      <h1>Pergunte ao Konqi!</h1>
+      <a target="_blank" href="http://https://github.com/RedsonBr140/pergunteaokonqi">Github</a>
+    </header>
+    <main>
+      <div class="wrapper">
+        <p class="konqi-answer" hidden>lorem ipsum</p>
+        <img alt="Konqi, mascote do KDE" class="konqi" src="https://community.kde.org/images.community/thumb/4/40/Mascot_konqi.png/400px-Mascot_konqi.png">
+        <form onsubmit="event.preventDefault()">
+          <label class="input-container">
+            Primeira Opção:
+            <input type="text" id="firstInput" required>
+          </label>
+          <label class="input-container">
+            Segunda Opção:
+            <input type="text" id="secondInput" required>
+          </label>
+          <button type="submit">Adivinhar.</button>
+        </form>
+      </div>
+    </main>
   </body>
 </html>
