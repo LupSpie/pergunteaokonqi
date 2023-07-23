@@ -1,39 +1,49 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>Pergunte ao Konqi!</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="index.js" defer></script>
-    <!-- Open Graph Stuff -->
-    <meta property="og:title" content="Pergunte ao Konqi!" />
-    <meta property="og:description" content="Simplesmente pergunte ao melhor mascote de todos os tempos." />
-    <meta property="og:url" content="https://redsonbr140.gitlab.io/pergunteaokonqi" />
-    <meta name="theme-color" content="#FF00FF" data-react-helmet="true" />
-  </head>
-  <body>
-    <header>
-      <h1>Pergunte ao Konqi!</h1>
-      <a target="_blank" href="http://https://github.com/RedsonBr140/pergunteaokonqi">Github</a>
-    </header>
-    <main>
-      <div class="wrapper">
-        <p class="konqi-answer" hidden>lorem ipsum</p>
-        <img alt="Konqi, mascote do KDE" class="konqi" src="https://community.kde.org/images.community/thumb/4/40/Mascot_konqi.png/400px-Mascot_konqi.png">
-        <form onsubmit="event.preventDefault()">
-          <label class="input-container">
-            Primeira Opção:
-            <input type="text" id="firstInput" required>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="color-scheme" content="dark light">
+  <title>Pergunte ao Konqi!</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="index.js" defer></script>
+  <!-- Open Graph Stuff -->
+  <meta property="og:title" content="Pergunte ao Konqi!" />
+  <meta property="og:description" content="Simplesmente pergunte ao melhor mascote de todos os tempos." />
+  <meta property="og:url" content="https://redsonbr140.gitlab.io/pergunteaokonqi" />
+  <meta name="theme-color" content="#FF00FF" data-react-helmet="true" />
+</head>
+
+<body>
+  <main>
+    <div class="wrapper">
+      <div class="konqi-container">
+        <!-- Konqi -->
+        <div class="konqi-header">
+          <p class="konqi-header__answer" hidden></p>
+          <img alt="Konqi, mascote do KDE" decoding="async" class="konqi-header__image"
+            src="https://community.kde.org/images.community/thumb/4/40/Mascot_konqi.png/400px-Mascot_konqi.png">
+        </div>
+        <!-- Fields -->
+        <form class="konqi-form" aria-label="Faça sua pergunta ao Konqi!" onsubmit="event.preventDefault()">
+          <label class="konqi-form__group">
+            <span>Primeira Opção:</span>
+            <input type="text" id="firstInput" maxlength="150" required />
           </label>
-          <label class="input-container">
-            Segunda Opção:
-            <input type="text" id="secondInput" required>
+          <label class="konqi-form__group">
+            <span>Segunda Opção:</span>
+            <input type="text" id="secondInput" maxlength="150" required />
           </label>
-          <button type="submit">Adivinhar.</button>
+          <button class="konqi-form__span" type="submit">Adivinhar.</button>
         </form>
       </div>
-    </main>
-  </body>
+    </div>
+  </main>
+  <footer>
+    <a target="_blank" href="https://github.com/RedsonBr140/pergunteaokonqi">Github</a>
+  </footer>
+</body>
+
 </html>
